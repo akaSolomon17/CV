@@ -39,10 +39,11 @@
   /* SKILLS BAR */
   .info-wrapped {
     width: 235px;
-    margin: 24px 0px;
     padding: 20px 35px 54px 35px;
-    border: #f7d75c solid 1px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
   }
+
   .skill li {
     margin: 10px 0;
     padding: 10px;
@@ -93,5 +94,20 @@
   .javascript {
     width: 60%;
     animation: javascript 3s;
+  }
+  .header-content {
+    display: flex;
+  }
+  .container {
+    display: flex;
+  }
+  .header-content img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+  .wrapped {
+    margin: 0px 434px;
+    border: 1px solid var(--text-color);
   }
 }

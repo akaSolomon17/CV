@@ -43,32 +43,82 @@
   box-sizing: border-box;
 }
 
+.wrapped {
+  margin: 0px 450px;
+}
 /* SKILLS BAR */
-.info-wrapped {
-  width: 400px;
-  padding: 20px 5px 54px 15px;
-  margin: 20px 30px 0px 0px;
+.header-content .ava-wrapped {
+  position: relative;
+  width: 375px;
+  height: 160px;
   background-color: var(--secondary-color);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.header-content .ava-wrapped img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 40px;
+  top: 0;
+  border: 12px solid var(--primary-color);
+}
+.info-wrapped {
+  width: 620px;
+  padding: 40px 5px 54px 15px;
+  margin: 20px 15px 0px 0px;
+  background-color: var(--secondary-color);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 .info2-wrapped {
   width: fit-content;
+  margin: 20px 30px 0px 15px;
+}
+.container .info-wrapped h2 {
+  margin: 30px 0px 0px 50px;
+}
+.container .info2-wrapped h2 {
+  margin: 30px 0px 0px 0px;
+}
+.contact i {
+  margin: 8px 0px 0px 55px;
+}
+.follow_me-tb i {
+  margin: 8px 0px 0px 55px;
+}
+.follow_me-tb span {
+  font-size: small;
+  height: auto;
 }
 .skill li {
   margin: 10px 0;
-  padding: 10px;
+  padding: 10px 0;
   display: flex;
 }
-.skill li .bar {
+.skill .skill-fl {
+  display: flex;
+  font-size: small;
+  margin-top: 12px;
+  justify-content: space-around;
+}
+.skill .sk_name {
+  text-align: left;
+  width: 20px;
+}
+.skill .bar {
   position: relative;
-  width: calc(100% - 150px);
+  margin-top: 7px;
+  width: calc(100% - 250px);
   height: 8px;
-  margin: 0 10px;
   border-radius: 10px;
   background-color: #151515;
   box-shadow: inset 0 0 10px #000;
   overflow: hidden;
+}
+.hobbies div {
+  font-size: small;
+  margin: 20px 0px 0px 55px;
 }
 .reactjs {
   width: 70%;
@@ -95,29 +145,48 @@
   animation: javascript 3s;
 }
 .header-content {
+  position: relative;
   display: flex;
 }
 .container {
   display: flex;
+  margin-top: 80px;
 }
 .header-content img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
 }
-.wrapped {
-  margin: 0px 450px;
-  border: 1px solid var(--text-color);
-}
+
 .t-al {
   text-align: left;
 }
+table {
+  position: relative;
+}
+.borderLine {
+  position: absolute;
+  border-top: 0.5px solid lightgrey;
+}
 .w-al {
   width: 200px;
+  vertical-align: top;
 }
 ul {
   list-style-type: none;
   text-align: left;
   margin: 0;
   padding: 0;
+}
+.about_me-wrapped .my_name {
+  padding: 50px 0px 20px 20px;
+}
+.about_me-wrapped p {
+  padding: 0px 0px 20px 20px;
+}
+.paragraph {
+  text-align: justify;
+}
+.info2-wrapped span {
+  margin: 0px 0px 20px 20px;
 }

@@ -6,8 +6,8 @@
   --header-height: 3rem;
   /* Colors */
   --primary-color: #ffffff;
-  --secondary-color: #f7d75c;
-  --tertiary-color: #fbd763;
+  --secondary-color: #ffe16a;
+  --tertiary-color: #fdda67;
   --title-color: #0b0a0a;
   --text-color: #403a3a;
   --container-color: #fafafa;
@@ -45,6 +45,7 @@
 
 .wrapped {
   margin: 0px 450px;
+  box-shadow: 0 0 10px lightgrey;
 }
 /* SKILLS BAR */
 .header-content .ava-wrapped {
@@ -63,33 +64,56 @@
   top: 0;
   border: 12px solid var(--primary-color);
 }
+.header-content .about_me-wrapped .last_name {
+  color: #434343;
+  font-size: 60px;
+  padding: 50px 0px 0px 37px;
+}
+.header-content .about_me-wrapped .first_name {
+  color: var(--secondary-color);
+  font-size: 60px;
+  padding: 0px 0px 20px 37px;
+}
 .info-wrapped {
+  position: relative;
   width: 620px;
-  padding: 40px 5px 54px 15px;
+  padding: 0px 25px 54px 15px;
   margin: 20px 15px 0px 0px;
   background-color: var(--secondary-color);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
 .info2-wrapped {
+  position: relative;
   width: fit-content;
   margin: 20px 30px 0px 15px;
 }
 .container .info-wrapped h2 {
-  margin: 30px 0px 0px 50px;
+  position: relative;
+  margin: 40px 0px 0px 50px;
 }
 .container .info2-wrapped h2 {
-  margin: 30px 0px 0px 0px;
+  position: relative;
+  margin: 40px 0px 20px 0px;
 }
 .contact i {
-  margin: 8px 0px 0px 55px;
+  margin: 0px 10px 0px 55px;
+}
+.contact li {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 .follow_me-tb i {
-  margin: 8px 0px 0px 55px;
+  margin: 0px 10px 0px 55px;
 }
 .follow_me-tb span {
   font-size: small;
-  height: auto;
+}
+.follow_me-tb li {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 .skill li {
   margin: 10px 0;
@@ -112,13 +136,23 @@
   width: calc(100% - 250px);
   height: 8px;
   border-radius: 10px;
-  background-color: #151515;
-  box-shadow: inset 0 0 10px #000;
+  background-color: #ab964f;
+  box-shadow: none 0 0 10px #000;
   overflow: hidden;
 }
-.hobbies div {
+.skill .skill-fl .bar div {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  background-color: #2d2a11;
+}
+.hobbies p {
   font-size: small;
   margin: 20px 0px 0px 55px;
+}
+.hobbies div {
+  display: block;
 }
 .reactjs {
   width: 70%;
@@ -150,7 +184,6 @@
 }
 .container {
   display: flex;
-  margin-top: 80px;
 }
 .header-content img {
   border-radius: 50%;
@@ -160,13 +193,13 @@
 
 .t-al {
   text-align: left;
+  margin-left: 20px;
+  left: -12px;
+  margin-top: 10px;
+  padding-left: 35px;
 }
 table {
   position: relative;
-}
-.borderLine {
-  position: absolute;
-  border-top: 0.5px solid lightgrey;
 }
 .w-al {
   width: 200px;
@@ -182,11 +215,89 @@ ul {
   padding: 50px 0px 20px 20px;
 }
 .about_me-wrapped p {
-  padding: 0px 0px 20px 20px;
+  font-size: 20px;
+  position: relative;
+  padding: 0px 0px 0px 37px;
+}
+.about_me-wrapped p::after {
+  content: "";
+  position: absolute;
+  top: 36.5px;
+  left: 37px;
+  width: 88%;
+  height: 0.5px;
+  background: darkgrey;
 }
 .paragraph {
   text-align: justify;
+  padding-right: 20px;
 }
 .info2-wrapped span {
-  margin: 0px 0px 20px 20px;
+  margin: 0px 0px 3px 18px;
+}
+.education {
+  position: relative;
+}
+.info2-wrapped h2 {
+  display: flex;
+  align-items: center;
+}
+.info2-wrapped #bf-af::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+  border: 1px solid #000;
+}
+.info2-wrapped #bf-af::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 3px;
+  width: 2px;
+  height: 110%;
+  background: #000;
+}
+.info2-wrapped #bf::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+  border: 1px solid #000;
+}
+.container .info2-wrapped h2::after {
+  content: "";
+  position: absolute;
+  top: 37px;
+  left: 1px;
+  width: 99%;
+  height: 0.5px;
+  background: darkgrey;
+}
+.container .info-wrapped h2::after {
+  content: "";
+  position: absolute;
+  top: 36.5px;
+  left: 1px;
+  width: 94%;
+  height: 0.5px;
+  background: rgb(189, 189, 189);
+}
+p,
+span,
+h2,
+ul,
+li,
+td,
+th,
+i {
+  color: var(--text-color) !important;
 }

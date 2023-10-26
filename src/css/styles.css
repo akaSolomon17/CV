@@ -50,7 +50,7 @@
 /* SKILLS BAR */
 .header-content .ava-wrapped {
   position: relative;
-  width: 375px;
+  width: 383px;
   height: 160px;
   background-color: var(--secondary-color);
   border-bottom-left-radius: 30px;
@@ -58,10 +58,12 @@
 }
 .header-content .ava-wrapped img {
   position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 40px;
-  top: 0;
   border: 12px solid var(--primary-color);
 }
 .header-content .about_me-wrapped .last_name {
@@ -185,11 +187,6 @@
 .container {
   display: flex;
 }
-.header-content img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-}
 
 .t-al {
   text-align: left;
@@ -300,4 +297,61 @@ td,
 th,
 i {
   color: var(--text-color) !important;
+}
+@media only screen and (max-width: 1524px) {
+  .wrapped {
+    width: 100%;
+    margin: 0px;
+  }
+  .about_me-wrapped p::after {
+    display: none;
+  }
+  .header-content .ava-wrapped {
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .header-content .ava-wrapped {
+    width: 390px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .info-wrapped,
+  .ava-wrapped {
+    width: 100% !important;
+  }
+  .about_me-wrapped p,
+  .header-content .about_me-wrapped .first_name {
+    text-align: center;
+    padding: 0px 0px 10px 0px;
+  }
+  .header-content .about_me-wrapped .last_name {
+    text-align: center;
+    padding: 60px 0px 0px 0px;
+  }
+  .info2-wrapped {
+    margin: 10px;
+  }
+  .container .info2-wrapped h2 {
+    text-align: center;
+  }
+  .paragraph {
+    padding: 0;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 458px) {
+  .w-al {
+    width: 120px;
+  }
+  .info2-wrapped #bf-af::after {
+    height: 106%;
+  }
 }
